@@ -10,8 +10,5 @@ const romanToNumerals = (roman) => {
   return number;
 };
 //  tests
-// console.log(romanToNumerals("XXI"));
-// console.log(romanToNumerals("I"));
-// console.log(romanToNumerals("IV"));
-// console.log(romanToNumerals("MMVIII"));
-// console.log(romanToNumerals("MDCLXVI"));
+romanToNumerals("XXI");
+romanToNumerals("IV");
