@@ -1,0 +1,1 @@
+function calculateFactorial(n) {}
