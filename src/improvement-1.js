@@ -6,8 +6,5 @@
 
 // FUNCTION 1
 export default function countR(word) {
-  const count = word.split("").reduce((acc, curr) => {
-    return curr === "R" ? acc + 1 : acc;
-  }, 0);
-  return count;
+  return word.split("").filter((char) => char === "R").length;
 }

@@ -12,9 +12,19 @@ export default function penaltyPoints(password = "") {
     return penalty;
   }
   if (typeof password !== "string") password = String(password);
+  //checks for similar consecutive characters in the password.
+  const regex = /(\w)\1{1,}/g;
+  const sequences = password.match(regex);
 
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  // * * * INSERT YOUR CODE HERE * * * * * * * * * * * * * *
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  //
+  if (!sequences) return penalty;
+  //assign penalty points based on the number of characters.
+  sequences.forEach((seq) => {
+    if (seq.length === 2) {
+      penalty += 1;
+    } else if (seq.length >= 3) {
+      penalty += 2;
+    }
+  });
+
+  return penalty;
 }
