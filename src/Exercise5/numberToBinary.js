@@ -1,3 +1,8 @@
 function numberToBinary(num) {
-  return `The binary of ${num} is ${num.toString(2)}`;
+  if (typeof num !== "number") {
+    throw new Error(`${num} is not a number`);
+  }
+  return num < 0
+    ? `${num}² is 1${num.toString(2).replace("-", "")}`
+    : `${num}² is ${num.toString(2)}`;
 }

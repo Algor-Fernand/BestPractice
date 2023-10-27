@@ -13,4 +13,3 @@ function fibonacci(num) {
   }
   return `Fibonnaci sequence up to ${num} numbers : ${arr}`;
 }
-console.log(fibonacci(5));
